@@ -18,4 +18,4 @@ jobs:
       - name: OWASP ZAP Full Scan
         uses: zaproxy/action-full-scan@v0.1.0
         with:
-         target: "http://testphp.vulnweb.com/"
+         target: "http://localhost:8080/WebGoat"
