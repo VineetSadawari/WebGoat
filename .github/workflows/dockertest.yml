@@ -13,9 +13,7 @@ jobs:
       - name: docker build
         run: |
           docker run -d -p 127.0.0.1:8080:8022 webgoat/webgoat-8.0
-          sleep 30
-
- 
+         
       - name: OWASP ZAP Full Scan
         uses: zaproxy/action-full-scan@v0.1.0
         with:
@@ -25,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
          name: my-artifact
-         path: /
+         path: /.github/**
 
       - uses: actions/download-artifact@v2
         with: 
